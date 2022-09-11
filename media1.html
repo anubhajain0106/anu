@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #box{
+            width: 90%;
+            height: auto;
+            display: grid;
+            grid-gap:1rem;
+            margin: auto;
+            grid-template-areas:
+            "nav nav nav nav"
+            "LeftBox LeftBox RightBox RightBox"
+            "LeftBox LeftBox RightBox RightBox";
+        }
+.nav1{
+    background-color: yellow;
+    min-height: 100px;
+    font-size: 50px;
+
+}
+.box1{
+    background-color: red;
+    min-height: 200px;
+    font-size: 30px;
+    color: gray;
+}
+.box2{
+    background-color: green;
+    min-height: 200px;
+     font-size: 30px;
+    color: gray;
+}
+#nav{
+    grid-area: nav;
+}
+#LeftBox {
+    grid-area: LeftBox;
+}
+#RightBox {
+    grid-area: RightBox;
+}
+ @media all and (min-width:450px) and (max-width:700px) {
+    #box{
+            width: 70%;
+            height: auto;
+            display: grid;
+            grid-gap:1rem;
+            margin: auto;
+            grid-template-areas:
+            "nav nav nav nav"
+            "LeftBox LeftBox LeftBox LeftBox"
+            "RightBox RightBox RightBox RightBox";
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="box">
+    <div id="nav" class="nav1">Nvigation</div>
+    <div id="LeftBox" class="box1">Left Box</div>
+    <div id="RightBox" class="box2">Right Box</div>
+    </div>
+</body>
+</html>
